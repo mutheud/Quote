@@ -1,0 +1,17 @@
+<form (ngSubmit)="addQuote()">
+  <div class="form-group" id="one" >
+    <p class="name">Author</p>
+    <input type= "text" class="form-control" [(ngModel)]= "newQuote.name" name= "name" #nameControl="ngModel" required>
+  </div>
+  <!-- <div class=form-group id=one>
+    <p class=gmail>Gmail</p>
+    <input>
+  </div> -->
+  <div class="form-group" id="one">
+    <p class="description">Description</p>
+    <textarea type= "text" class="form-control" rows="8" [(ngModel)]= "newQuote.description" #descriptionControl="ngModel" name= "description" required></textarea>
+  </div>
+<button>Add Quote</button>
+<p>{{name}}</p>
+<p>{{description}}</p>
+</form>
