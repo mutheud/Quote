@@ -5,5 +5,8 @@ body{
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmb1PbEBgTC2QczI4-QBG-FBAIr9i4w-P2s2LlDW60aujjnJXB");
     background-repeat:repeat-x ;
     color: white;
+    font-size: 30px;
+    font-weight: bold;
+    /* font-style: oblique; */
 }
 

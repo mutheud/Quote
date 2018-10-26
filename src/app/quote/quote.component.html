@@ -1,14 +1,15 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <h1>My Quotes</h1>
 <app-quote-form (formQuote)="addNewQuote($event)"></app-quote-form>
 <ul>
   <div *ngFor='let quote of quotes; let i = index'>
     <li appUpvote>{{quote.name}}</li>
 
-    <button (click)='toggleDetails(i)'>Toggle Details</button>
+    <button type="button" class="btn btn-primary" (click)='toggleDetails(i)'>Toggle Details</button>
 
     <app-quote-detail *ngIf="quote.showDescription" [quote]='quote' (isTobeDeleted)='deleteQuote($event, i)'></app-quote-detail>
-    <button (click)="upVote(i)">upvote {{quote.upVote}}</button>
-    <button (click)="downVote(i)">downvote {{quote.downVote}}</button>
+    <button type="button" class="btn btn-success" (click)="upVote(i)">upvote {{quote.upVote}}</button>
+    <button type="button" class="btn btn-danger"(click)="downVote(i)">downvote {{quote.downVote}}</button>
   </div>
 
 </ul>
